@@ -53,17 +53,22 @@ namespace capstoneProjected
             try
             {
                 File.WriteAllLines(filePath, RoomList);
+                Console.WriteLine("List Written Successfully.");
             }
             catch (Exception) // throw any exception up to the calling method
             {
                 Console.WriteLine("Didn't Work. Try Again.");
             }
 
+           
+
             DisplayContinueScreeeeeeeeeeeeeen();
         }
 
         static List<RoomStats> ReadListFromFile()
         {
+            DisplayHeader("Story Time");
+
             const char delineator = ',';
             List<string> roomState = new List<string>();
             List<RoomStats> roomStates = new List<RoomStats>();
@@ -90,6 +95,10 @@ namespace capstoneProjected
                 roomStates.Add(tempUserRoom);
             }
 
+            if (roomStates.Contains(tempUserRoom))
+            {
+                Console.WriteLine("List Read Successfully!");
+            }
 
             DisplayContinueScreeeeeeeeeeeeeen();
             return roomStates;
@@ -169,14 +178,14 @@ namespace capstoneProjected
                 Console.WriteLine("Pick an Option:");
                 Console.Write(
                     "\n A) Write a Room List to A File" +
-                    "/n B) Read a room From a File" +
+                    "\n B) Read a room From a File" +
                     "\n C) Add a Room" +
                     "\n D) View the list of Rooms" +
                     "\n E) Exit \n\n");
 
                 totalSquared = totalSquared + tempSquare;
 
-                Console.WriteLine($"Current Square Footage: {totalSquared}");
+                //Console.WriteLine($"Current Square Footage: {totalSquared}");
                 Console.WriteLine($"Current Number of Rooms: {roomState.Count}");
 
                 //Console.WriteLine($"Current Total Square footage: {roomState}");
