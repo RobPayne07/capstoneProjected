@@ -197,7 +197,7 @@ namespace capstoneProjected
                         menuRun = true;
                         break;
                     case "B":
-                        ReadListFromFile();
+                        roomState = ReadListFromFile();
                         menuRun = true;
                         break;
                     case "C":
