@@ -178,7 +178,7 @@ namespace capstoneProjected
                 Console.WriteLine("Pick an Option:");
                 Console.Write(
                     "\n A) Write a Room List to A File" +
-                    "\n B) Read a room From a File" +
+                    "\n B) Read a Room List From a File" +
                     "\n C) Add a Room" +
                     "\n D) View the list of Rooms" +
                     "\n E) Exit \n\n");
