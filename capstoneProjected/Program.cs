@@ -69,7 +69,7 @@ namespace capstoneProjected
         {
             DisplayHeader("Story Time");
 
-            const char delineator = ',';
+            const char delineator = ','; // John Velis
             List<string> roomState = new List<string>();
             List<RoomStats> roomStates = new List<RoomStats>();
             RoomStats tempUserRoom = new RoomStats();
@@ -231,7 +231,7 @@ namespace capstoneProjected
             foreach (RoomStats roomStat in roomState)
             {
                 Console.WriteLine($"\t{roomStat.RoomName}".PadRight(25) + $"{roomStat.DimensionOne}".PadRight(25) + $"{roomStat.DimensionTwo}".PadRight(25) + $"{roomStat.SquareFootage}\n");
-                totalSquared += roomStat.SquareFootage;
+                totalSquared += roomStat.SquareFootage; // John Velis
             }
 
             Console.WriteLine($"Current Square Footage: {totalSquared}");
